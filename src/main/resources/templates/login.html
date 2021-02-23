@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login Customer</title>
+    <link th:href="@{/static/css/login.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<div th:insert="fragments/navbar.html :: navBar"></div>
+
+<div class="container">
+    <form class="form-signin" method="post" action="/auth/login">
+        <h2 class="form-signin-heading">Login</h2>
+        <div class="labels">
+            <label for="username">Username</label>
+            <label for="password">Password</label>
+        </div>
+        <div class="inputs">
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        </div>
+        <button class="button_login" type="submit">Войти</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Orders</title>
+<link th:href="@{/static/css/orders.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<div th:insert="fragments/navbar.html :: navBar"></div>
+
+<div class="orders">
+    <div class="order">
+        <img class="image" th:src="'/static/img/consultation.jpg'">
+        <h3 class="title">Консультация</h3>
+        <p class="text">Text text text text text text text text text text text text text text text text text text text text text 
+            text text text text text text text text text text text text text text text text text text text text
+            text text text text text text text text text text text text text text text text text text text text 
+            Text text text text text text text text text text text text text text text text text text text text text 
+            text text text text text text text text text text text text text text text text text text text text
+            text text text text text text text text text text text text text text text text text text text text</p>
+        <p class="price">1000kr</p>
+    </div>
+
+    <div class="order">
+        <img class="image" th:src="'/static/img/desteny_matrix.jpg'">
+        <h3 class="title">Матрица судьбы</h3>
+        <p class="text">Text text text text text text text text text text text text text text text text text text text text text 
+            text text text text text text text text text text text text text text text text text text text text
+            text text text text text text text text text text text text text text text text text text text text</p>
+        <p class="price">1000kr</p>
+    </div>
+
+    <div class="order">
+        <img class="image" th:src="'/static/img/holegen.jpg'">
+        <h3 class="title">Хологинетический профиль</h3>
+        <p class="text">Text text text text text text text text text text text text text text text text text text text text text 
+            text text text text text text text text text text text text text text text text text text text text
+            text text text text text text text text text text text text text text text text text text text text</p>
+        <p class="price">1000kr</p>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+.bg-image{
+	background-color: #f7f8fa;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;	
+}
+.post_up{
+	width: 800px;
+    max-height: 600px;
+    overflow: hidden;
+    clear: both;
+    max-height: 600px;
+    overflow: hidden;
+}
+.post{
+    margin-left: auto;
+    margin-right: auto ;
+    margin-top: 50px;
+    width: 800px;
+    
+    clear: both;
+	border-radius:5px;
+    box-shadow: 3px 3px 3px 3px #afafaf;
+    background: linear-gradient(to top, rgba(204, 204, 204, 0.9) 0%, rgba(255, 254, 250, 1) 5%, rgba(255, 254, 250,1) 100%);   
+                                           
+/*     background: linear-gradient(to top, rgba(0,0,0,.5) 0%, rgba(0,0,0,.3) 4%, rgba(0,0,0,.05) 7%,
+                                           rgba(0,0,0,0) 25%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 35%,
+                                           rgba(0,0,0,0) 60%, rgba(0,0,0,0) 65%, rgba(0,0,0,0) 65%,
+                                           rgba(0,0,0,0) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 85%,
+                                           rgba(0,0,0,0) 100%);  */
+}
+.post_one{
+	border-radius:5px;
+	background-color: #fffefa;
+    margin-left: auto;
+    margin-right: auto ;
+    margin-top: 50px;
+    padding: 20px;
+    width: 800px;
+}
+.post:hover{
+    margin-left: auto;
+    margin-right: auto ;
+    margin-top: 50px;
+    width: 800px;
+    max-height: 600px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 15px #474747;
+}
+.link{
+    text-decoration: none;
+    color:black;
+}
+.title{
+    margin-left:20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.image {
+    height:350px;
+    margin-left:20px;
+}
+.text{
+    margin:20px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    
+}
+.buttons{
+	float:left;
+	margin-top:50px;
+	margin-left:20px;
+}
+
+.button_create{
+	font-family: Arial, Helvetica, sans-serif;
+	background: #767a64;
+	color:#ffffff;
+	border-radius: 10px;
+	display: block;
+	width: 150px;
+	padding:20px 20px;
+	margin:0 auto;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	font-size: 16px;
+}
+.button_create:hover{
+	font-family: Arial, Helvetica, sans-serif;
+	background: #70AD47;
+	color:#ffffff;
+	border-radius: 10px;
+	display: block;
+	width: 150px;
+	padding:20px 20px;
+	margin:0 auto;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	font-size: 16px;
+	box-shadow: 15px 15px 15px 0px #C0C0C0;
+}
+
+.button_edit{
+	font-family: Arial, Helvetica, sans-serif;
+	background: #e4c664;
+	color:#ffffff;
+	border-radius: 10px;
+	display: block;
+	width: 150px;
+	padding:10px 20px;
+	margin:0 auto;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	font-size: 16px;
+}
+.button_edit:hover{
+	background: #FFC000;
+	color:#ffffff;
+	border-radius: 10px;
+	display: block;
+	width: 150px;
+	padding:10px 20px;
+	margin:0 auto;
+	text-decoration:none;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 16px;
+	box-shadow: 15px 15px 15px 0px #C0C0C0;
+}
+
+
+.button_delete{
+	margin-top: 60px;
+	background: #e48864;
+	color:#FFFFFF;
+	border-radius: 10px;
+	display: block;
+	width: 150px;
+	padding:20px 20px;
+	text-decoration:none;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 16px;
+}
+.button_delete:hover{
+	margin-top: 60px;
+	background: #FF4F4F;
+	color:#FFFFFF;
+	border-radius: 10px;
+	display: block;
+	width: 150px;
+	padding:20px 20px;
+	text-decoration:none;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 16px;
+	box-shadow: 15px 15px 15px 0px #C0C0C0;
+}

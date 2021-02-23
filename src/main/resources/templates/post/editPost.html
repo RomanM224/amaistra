@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Edit post</title>
+<link th:href="@{/static/css/tinyMCE.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+    <div th:insert="fragments/navbar.html :: navBar"></div>
+
+    <form class="form" th:action="@{/posts/edit}" th:method="post" enctype="multipart/form-data">
+        <input type="text" name="id" th:value="${post.getId()}" hidden>
+        <input type="text" name="imageName" th:value="${post.getImageName()}" hidden>
+        <div class="title">
+            <label>Заголовок</label>
+            <input type="text" name="title" class="title_input" th:value="${post.getTitle()}">
+        </div>
+        <label class="file" for="file_upload">Загрузить картинку</label>
+        <input type="file" name="file" id="file_upload" class="file_input">
+        <div class="tinymce_block">
+            <textarea class="tinymce" id="texteditor" name="text" th:text="${post.getText()}"></textarea>
+        </div>
+        <input type="submit" class="submit_button" value="Отредактировать">
+    </form>
+
+
+
+
+    <script type="text/javascript" th:src="@{/static/tinyMCE/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/tinyMCE/plugin/tinymce/tinymce.min.js}"></script>
+    <script type="text/javascript" th:src="@{/static/tinyMCE/plugin/tinymce/init-tinymce.js}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Log In</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link th:href="@{/static/css/home.css}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+   <div th:insert="fragments/navbar.html :: navBar"></div>
+
+  <div>
+      <p th:text="'Hello, ' + ${amaistra} + '!'" />
+      <a th:href="@{/auth/login}">Log In</a>
+  </div>
+  
+  <div sec:authorize="isAuthenticated()">This content is only shown to authenticated users.
+      <form action="/auth/logout" method="POST">
+            <button type="submit">Logout</button>
+        </form>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Posts</title>
+<link th:href="@{/static/css/post.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+    <div th:insert="fragments/navbar.html :: navBar"></div>
+    <div class="buttons">
+        <div sec:authorize="isAuthenticated()">
+            <a class="button_create" th:href="@{/posts/create}">Написать статью</a>
+        </div>
+    </div>
+
+    <div th:each="post: ${posts}" class="post">
+        <a class="link" th:href="${'/posts/' + post.getId()}">
+            <div class="post_up">
+                <h2 class="title" th:text="${post.getTitle()}"></h2>
+                <div th:if="${post.getImageName() != null && !post.getImageName().isEmpty()}">
+                    <img th:src="${'/img/' + post.getImageName()}" class="image">
+                </div>
+                <div class="text">
+                    <p th:utext="${post.getText()}"></p>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
