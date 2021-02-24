@@ -2,6 +2,7 @@ package com.amaistra.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -52,6 +53,34 @@ public class PostService {
         posts.sort((Post one, Post two) -> two.getId().compareTo(one.getId()));
         return posts;
     }
+    
+    public List<Post> getPostsByPage(Integer page){
+        Integer offset = 7 * (page - 1);
+        List<Post> posts = postRepository.findByLimitAndOffset(7, offset);
+        if(posts == null) {
+            return Collections.emptyList();
+        }
+        posts.sort((Post one, Post two) -> two.getId().compareTo(one.getId()));
+        return posts;
+    }
+    
+    public List<Integer> getPages(){
+        Long rows  = postRepository.count();
+        if(rows.equals(0)) {
+            int[] nums = {1};
+            return Arrays.asList(1);
+        }
+        Long pages = rows / 7;
+        if(rows % 7 != 0 ) {
+            pages = rows / 7 + 1;
+        }
+        List<Integer> pagesList = new ArrayList<>();
+        for(int i = 1; i <= pages; i++) {
+            pagesList.add(i);
+        }
+        return pagesList;
+    }
+    
     
     public Post getById(Long id) {
         return postRepository.findById(id).get();

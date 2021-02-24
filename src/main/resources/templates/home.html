@@ -8,7 +8,7 @@
 
 </head>
 
-<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<body class="bg-image" th:style="'background-image:url(' + @{/static/img/background.jpg} + ');'">
    <div th:insert="fragments/navbar.html :: navBar"></div>
 
   <div>
@@ -22,5 +22,6 @@
         </form>
   </div>
   
+  <div th:insert="fragments/footer.html :: footer"></div>
 </body>
 </html>

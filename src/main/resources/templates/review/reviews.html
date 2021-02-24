@@ -5,7 +5,7 @@
 </head>
 <link th:href="@{/static/css/review.css}" rel="stylesheet" type="text/css">
 
-<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<body class="bg-image" th:style="'background-image:url(' + @{/static/img/background.jpg} + ');'">
     <div th:insert="fragments/navbar.html :: navBar"></div>
     <div class="buttons">
         <div sec:authorize="isAuthenticated()">
@@ -14,10 +14,10 @@
     </div>
     <div sec:authorize="isAuthenticated()">
         <div th:each="review: ${reviews}">
-            <a class="link" th:href="${'/reviews/' + review.getId()}">
+            <a class="link" th:href="@{${'/reviews/' + review.getId()}}">
                 <div class="review">
-                    <div th:if="${review.getImageName() != null}">
-                        <img th:src="${'/img/' + review.getImageName()}" class="image">
+                    <div th:if="${review.getImageName() != null && !review.getImageName().isEmpty()}">
+                        <img th:src="@{${'/img/' + review.getImageName()}}" class="image">
                     </div>
                     <div class="text">
                         <p th:utext="${review.getText()}"></p>
@@ -30,8 +30,8 @@
     <div sec:authorize="isAnonymous()">
         <div th:each="review: ${reviews}">
             <div class="review">
-                <div th:if="${review.getImageName() != null}">
-                    <img th:src="${'/img/' + review.getImageName()}" class="image">
+                <div th:if="${review.getImageName() != null && !review.getImageName().isEmpty()}">
+                    <img th:src="@{${'/img/' + review.getImageName()}}" class="image">
                 </div>
                 <div class="text">
                     <p th:utext="${review.getText()}"></p>

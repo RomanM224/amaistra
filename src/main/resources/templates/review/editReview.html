@@ -6,7 +6,7 @@
 
 </head>
 
-<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<body class="bg-image" th:style="'background-image:url(' + @{/static/img/background.jpg} + ');'">
     <div th:insert="fragments/navbar.html :: navBar"></div>
 
     <form class="form" th:action="@{/reviews/edit}" th:method="post" enctype="multipart/form-data">

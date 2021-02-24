@@ -38,6 +38,18 @@ public class PostController {
         ModelAndView modelAndView = new ModelAndView("post/posts");
         List<Post> posts = postService.getAll();
         modelAndView.addObject("posts", posts);
+        List<Integer> pages = postService.getPages();
+        modelAndView.addObject("pages", pages);
+        return modelAndView;
+    }
+    
+    @GetMapping("/page/{id}")
+    public ModelAndView getByPage(@PathVariable Integer id) {
+        ModelAndView modelAndView = new ModelAndView("post/posts");
+        List<Post> posts = postService.getPostsByPage(id); 
+        List<Integer> pages = postService.getPages();
+        modelAndView.addObject("pages", pages);
+        modelAndView.addObject("posts", posts);
         return modelAndView;
     }
 
@@ -63,6 +75,7 @@ public class PostController {
         ModelAndView modelAndView = new ModelAndView("post/post");
         Post post = postService.getById(id);
         modelAndView.addObject("post", post);
+        modelAndView.addObject("message", "v");
 
         return modelAndView;
     }

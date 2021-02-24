@@ -6,7 +6,7 @@
 
 </head>
 
-<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<body class="bg-image" th:style="'background-image:url(' + @{/static/img/background.jpg} + ');'">
     <div th:insert="fragments/navbar.html :: navBar"></div>
 
     <div class="title">
@@ -17,19 +17,19 @@
         <div class="contacts_service">
             <h4>Информация по поводу услуг:</h4>
             <div class="service">
-                <img th:src="'/static/img/icons/skype.png'" class="icon">
+                <img th:src="@{/static/img/icons/skype.png}" class="icon">
                 <p class="service_text">alisam.skype</p>
             </div>
             <div class="service">
-                <img th:src="'/static/img/icons/whatsapp.png'" class="icon">
+                <img th:src="@{/static/img/icons/whatsapp.png}" class="icon">
                 <p class="service_text">+22 222 222 222</p>
             </div>
             <div class="service">
-                <img th:src="'/static/img/icons/telegram.png'" class="icon">
+                <img th:src="@{/static/img/icons/telegram.png}" class="icon">
                 <p class="service_text">+22 222 222 222</p>
             </div>
             <div class="service">
-                <img th:src="'/static/img/icons/viber.png'" class="icon">
+                <img th:src="@{/static/img/icons/viber.png}" class="icon">
                 <p class="service_text">+22 222 222 222</p>
             </div>
 
@@ -39,17 +39,17 @@
             <h4>Следите за нами:</h4>
             <div>
                 <a href="https://www.facebook.com/" class="link">
-                    <img th:src="'/static/img/icons/facebook.png'" class="icon_follow_top">
+                    <img th:src="@{/static/img/icons/facebook.png}" class="icon_follow_top">
                 </a>
             </div>
             <div>
                 <a href="https://www.instagram.com/" class="link">
-                    <img th:src="'/static/img/icons/instagram.png'" class="icon_follow">
+                    <img th:src="@{/static/img/icons/instagram.png}" class="icon_follow">
                 </a>
             </div>
             <div>
                 <a href="https://vk.com/?lang=en" class="link">
-                    <img th:src="'/static/img/icons/VK.png'" class="icon_follow">
+                    <img th:src="@{/static/img/icons/VK.png}" class="icon_follow">
                 </a>
             </div>
         </div>

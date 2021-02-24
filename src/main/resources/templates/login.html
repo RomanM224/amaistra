@@ -5,11 +5,11 @@
     <link th:href="@{/static/css/login.css}" rel="stylesheet" type="text/css">
 </head>
 
-<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<body class="bg-image" th:style="'background-image:url(' + @{/static/img/background.jpg} + ');'">
 <div th:insert="fragments/navbar.html :: navBar"></div>
 
 <div class="container">
-    <form class="form-signin" method="post" action="/auth/login">
+    <form class="form-signin" th:method="post" th:action="@{/auth/login}">
         <h2 class="form-signin-heading">Login</h2>
         <div class="labels">
             <label for="username">Username</label>

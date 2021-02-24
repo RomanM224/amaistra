@@ -4,14 +4,14 @@
 
     <header class="header">
         <div class="logout" sec:authorize="isAuthenticated()">
-            <form action="/auth/logout" method="POST">
+            <form th:action="@{/auth/logout}" th:method="POST">
                 <button class="button_logout" type="submit">Выйти</button>
             </form>
         </div>
         <nav class="nav-bar">
             <a th:href="@{/}" class="nav-item">Начало</a>
             <a th:href="@{/orders}" class="nav-item">Заказать</a>
-            <a th:href="@{/posts}" class="nav-item">Новости</a>
+            <a th:href="@{/posts/page/1}" class="nav-item">Новости</a>
             <a th:href="@{/reviews}" class="nav-item">Отзывы</a>
             <a th:href="@{/contacts}" class="nav-item">Контакты</a>
         </nav>

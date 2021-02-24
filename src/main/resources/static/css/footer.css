@@ -1,0 +1,9 @@
+footer{
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #829fff;
+	margin-top:auto;
+}
+footer p{
+	text-align:center;
+}

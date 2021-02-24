@@ -6,12 +6,12 @@
 
 </head>
 
-<body class="bg-image" th:style="'background-image: url(/static/img/background.jpg);'">
+<body class="bg-image" th:style="'background-image:url(' + @{/static/img/background.jpg} + ');'">
 <div th:insert="fragments/navbar.html :: navBar"></div>
 
 <div class="orders">
     <div class="order">
-        <img class="image" th:src="'/static/img/consultation.jpg'">
+        <img class="image" th:src="@{/static/img/consultation.jpg}">
         <h3 class="title">Консультация</h3>
         <p class="text">Text text text text text text text text text text text text text text text text text text text text text 
             text text text text text text text text text text text text text text text text text text text text
@@ -23,7 +23,7 @@
     </div>
 
     <div class="order">
-        <img class="image" th:src="'/static/img/desteny_matrix.jpg'">
+        <img class="image" th:src="@{/static/img/desteny_matrix.jpg}">
         <h3 class="title">Матрица судьбы</h3>
         <p class="text">Text text text text text text text text text text text text text text text text text text text text text 
             text text text text text text text text text text text text text text text text text text text text
@@ -32,7 +32,7 @@
     </div>
 
     <div class="order">
-        <img class="image" th:src="'/static/img/holegen.jpg'">
+        <img class="image" th:src="@{/static/img/holegen.jpg}">
         <h3 class="title">Хологинетический профиль</h3>
         <p class="text">Text text text text text text text text text text text text text text text text text text text text text 
             text text text text text text text text text text text text text text text text text text text text

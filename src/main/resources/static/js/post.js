@@ -5,3 +5,4 @@ function confirmDelete(){
     	window.location.href = deleteUrl.id;
 	}
 }
+console.log(deleteUrl);
